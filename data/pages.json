@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "/",
+    "template": "home",
+    "name": "Greedy Pig Delicatessen",
+    "schemaId": "https://www.greedypigdeli.co.uk",
+    "schemaName": "greedy-pig",
+    "vcf": "../static/contact.vcf",
+    "content": "<p>The Greedy Pig Deli offers a range of homemade takeaway food.  Call in to try our breakfast boxes, healthy salad bar, filled rolls, scotch eggs, pasties, homemade cakes and slices, hot homemade daily specials and soups.</p><p>All our food is sourced from local suppliers and we work hard to ensure we recycle, reduce and re-use.</p>",
+    "googlePlaceId": "ChIJZZVxO22JeUgRtFX7YqO4Ntc",
+    "primaryImage": {
+      "filePath": "../static/img/10.jpg",
+      "name": "Shop exterior"
+    },
+    "images": [
+      {
+        "filePath": "../static/img/2.jpg",
+        "name": "Salad counter"
+      },
+      {
+        "filePath": "../static/img/5.jpg",
+        "name": "Deli counter"
+      },
+      {
+        "filePath": "../static/img/6.jpg",
+        "name": "Ice cream"
+      },
+      {
+        "filePath": "../static/img/7.jpg",
+        "name": "Staff"
+      },
+      {
+        "filePath": "../static/img/8.jpg",
+        "name": "Honey"
+      },
+      {
+        "filePath": "../static/img/9.jpg",
+        "name": "Snacks"
+      },
+      {
+        "filePath": "../static/img/10.jpg",
+        "name": "Shop exterior"
+      }
+    ],
+    "documents": [
+      {
+        "filePath": "../static/greedy-pig-menu-april-2017.pdf",
+        "name": "Menu"
+      }
+    ],
+    "links": [
+      {
+        "image": "../static/trip-advisor.png",
+        "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g209970-d4912532-Reviews-Greedy_Pig_Delicatessen-Matlock_Derbyshire_England.html",
+        "title": "Trip Advisor"
+      },
+      {
+        "image": "../static/food-hygiene-rating.png",
+        "url": "http://ratings.food.gov.uk/business/en-GB/258139/The-Greedy-Pig-Delicatessen-Derbyshire",
+        "title": "Food Hygiene Rating"
+      },
+      {
+        "image": "../static/flogo_RGB_HEX-512.png",
+        "url": "https://www.facebook.com/greedypigmatlock/",
+        "title": "Facebook Page"
+      }
+    ]
+  }
+]

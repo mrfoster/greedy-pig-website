@@ -1,33 +1,46 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'gatsby'
+import Bounce from 'react-reveal/Bounce'
+import Reveal from 'react-reveal/Reveal'
+import { FaUtensils } from 'react-icons/fa'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
+class Header extends Component {
+  componentDidMount() {
+    const effects = [
+      'bounce',
+      'rubberBand',
+      'swing',
+      'tada',
+      'wobble',
+      'jello',
+      'heartBeat',
+    ]
+
+    this.setState({
+      effect: effects[Math.floor(Math.random() * effects.length)],
+    })
+  }
+
+  render() {
+    return (
+      <header>
+        <Link to="/" className="logo">
+          <Reveal when={this.state} effect={this.state && this.state.effect}>
+            <img width="48" height="48" alt="Company Logo" src="/logo.svg" />
+          </Reveal>
         </Link>
-      </h1>
-    </div>
-  </div>
-)
+
+        <Bounce right>
+          <h1>{this.props.title}</h1>
+        </Bounce>
+        {this.props.subTitle && (
+          <h2>
+            <FaUtensils /> {this.props.subTitle}
+          </h2>
+        )}
+      </header>
+    )
+  }
+}
 
 export default Header

@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Greedy Pig Delicatessen
+ORG:Greedy Pig Delicatessen
+PHOTO;MEDIATYPE=image/svg:https://www.greedypigdeli.co.uk/logo.svg
+TEL;TYPE=WORK,VOICE:+44 1629 593476
+ADR;TYPE=WORK:Greedy Pig Delicatessen,79 Smedley St E;Matlock;DE4 3FQ;UK
+EMAIL:enquiries@blueberryfood.co.uk
+URL:https://www.greedypigdeli.co.uk
+END:VCARD
