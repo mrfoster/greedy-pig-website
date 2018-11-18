@@ -16,6 +16,14 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <Helmet
+        title={data.page.name}
+        meta={[
+          {
+            name: 'description',
+            content: data.schema.description,
+          },
+          { property: 'og:type', content: 'website' },
+        ]}
         script={[
           {
             type: 'application/ld+json',
@@ -24,7 +32,7 @@ const Home = ({ data }) => {
         ]}
       />
       <Header title={data.page.name} />
- 
+      <section dangerouslySetInnerHTML={{ __html: data.page.content }} />
       <Images data={data} />
       <Contact data={data} />
       <OpeningTimes data={data} />
@@ -38,68 +46,69 @@ const Home = ({ data }) => {
 export default Home
 
 export const pageQuery = graphql`
-query($slug: String!, $schemaId: String!, $schemaName: String!) {
-  schemaContent: file(name: { eq: $schemaName }) {
-    fields {
-      content
-    }
-  }
-  schema: schemasJson(_id: { eq: $schemaId }) {
-    name
-    address {
-      streetAddress
-      addressLocality
-      addressRegion
-      postalCode
-      addressCountry
-    }
-    telephone
-    email
-    geo {
-      latitude
-      longitude
-    }
-    openingHoursSpecification {
-      dayOfWeek
-      opens
-      closes
-    }
-  }
-
-  page: pagesJson(slug: { eq: $slug }) {
-    name
-    content
-    googlePlaceId
-    vcf {
-      publicURL
-    }
-    images {
-      filePath {
-        childImageSharp {
-          fluid(maxWidth: 800, maxHeight: 600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
+  query($slug: String!, $schemaId: String!, $schemaName: String!) {
+    schemaContent: file(name: { eq: $schemaName }) {
+      fields {
+        content
       }
-      name
     }
-    documents {
-      filePath {
+    schema: schemasJson(_id: { eq: $schemaId }) {
+      name
+      description
+      address {
+        streetAddress
+        addressLocality
+        addressRegion
+        postalCode
+        addressCountry
+      }
+      telephone
+      email
+      geo {
+        latitude
+        longitude
+      }
+      openingHoursSpecification {
+        dayOfWeek
+        opens
+        closes
+      }
+    }
+
+    page: pagesJson(slug: { eq: $slug }) {
+      name
+      content
+      googlePlaceId
+      vcf {
         publicURL
       }
-      name
-    }
-    links {
-      url
-      title
-      image {
-        childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      images {
+        filePath {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 600) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        name
+      }
+      documents {
+        filePath {
+          publicURL
+        }
+        name
+      }
+      links {
+        url
+        title
+        image {
+          childImageSharp {
+            fixed(width: 100) {
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
+            }
           }
         }
       }
     }
   }
-}
 `

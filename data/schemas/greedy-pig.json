@@ -3,7 +3,7 @@
   "@type": "FoodEstablishment",
   "@id": "https://www.greedypigdeli.co.uk",
   "name": "Greedy Pig Delicatessen",
-  "description": "......",
+  "description": "The Greedy Pig Deli offers a range of homemade takeaway food.  Call in to try our breakfast boxes, healthy salad bar, filled rolls, scotch eggs, pasties, homemade cakes and slices, hot homemade daily specials and soups.",
   "url": "https://www.greedypigdeli.co.uk",
   "address": {
     "@type": "PostalAddress",
