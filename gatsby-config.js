@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.blueberryfood.co.uk`,
-    title: 'Blueberry Food Website',
+    siteUrl: `https://www.greedypigdeli.co.uk`,
+    title: 'Greedy Pig Delicatessen',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
