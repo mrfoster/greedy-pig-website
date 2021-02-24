@@ -6405,10 +6405,10 @@ gatsby-transformer-sharp@2.12.0:
     semver "^7.3.4"
     sharp "^0.27.0"
 
-gatsby@2.32.5:
-  version "2.32.5"
-  resolved "https://registry.npmjs.org/gatsby/-/gatsby-2.32.5.tgz"
-  integrity sha512-tQdMsYZVtVREV3HyEvlWo4sRqA3Hv787zKa9IJJZJFeZTKdv9KK7bwq1q+OBaHP5hZDnWvjj8Uo/UalXdKg2IA==
+gatsby@2.32.6:
+  version "2.32.6"
+  resolved "https://registry.npmjs.org/gatsby/-/gatsby-2.32.6.tgz"
+  integrity sha512-HZmBZnjOSaXvrIbnlP29QAB9RyGcitnp/an5lWLH2C7cvU/uhqkE0ERWgIHym5+ABBAwpAKT0e1KQh9RbzgMdw==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
